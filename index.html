@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blackjack</title>
+  <style>
+    body {
+      background: #2b2d31;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .card {
+      display: inline-block;
+      border: 1px solid white;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 8px;
+      background: #1e1f22;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #5865f2;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #4752c4;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🃏 Blackjack</h1>
+
+<h2>Balance: $<span id="balance">1000</span></h2>
+
+<div>
+  Bet: <input type="number" id="bet" value="100" min="1">
+  <button onclick="startGame()">Start Game</button>
+</div>
+
+<h3>Dealer</h3>
+<div id="dealer-cards"></div>
+<p>Score: <span id="dealer-score">0</span></p>
+
+<h3>You</h3>
+<div id="player-cards"></div>
+<p>Score: <span id="player-score">0</span></p>
+
+<div>
+  <button onclick="hit()">Hit</button>
+  <button onclick="stand()">Stand</button>
+</div>
+
+<h2 id="result"></h2>
+
+<script src="script.js"></script>
+</body>
+</html>
